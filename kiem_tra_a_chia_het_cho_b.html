@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập hai số a và b, kiểm tra xem a có chia hết cho b hay không-->
+<h1>Kiểm tra a chia hết cho b</h1>
+<input type="number" id="a" placeholder="Nhập giá trị của a: ">
+<input type="number" id="b" placeholder="Nhập giá trị của b: ">
+<button onclick="xuatkq()">Kết quả</button>
+<p id="kq2"></p>
+<p id="kq"></p>
+</body>
+<script>
+    function xuatkq(){
+        let a =+document.getElementById('a').value;
+        let b =+document.getElementById('b').value;
+       let c = a%b;
+       document.getElementById('kq2').innerHTML=' số dư là: '+ c;
+        if (c == 0){
+            document.getElementById('kq').innerHTML = 'a chia hết cho b'
+        }
+        else {
+            document.getElementById('kq').innerHTML = 'a không chia hết cho b'
+        }
+    }
+</script>
+</html>
